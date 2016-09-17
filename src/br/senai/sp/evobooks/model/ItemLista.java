@@ -9,8 +9,8 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@Entity
 @JsonIgnoreProperties("lista")
+@Entity
 public class ItemLista {
 	
 	@Id
