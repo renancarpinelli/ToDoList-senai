@@ -12,7 +12,7 @@
 	http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 		http://www.springframework.org/schema/tx
 	http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
-	<context:component-scan base-package="br.senai.sp.informatica.todolist" />
+	<context:component-scan base-package="br.senai.sp.evobooks" />
 	<mvc:default-servlet-handler />
 	<mvc:annotation-driven />
 
