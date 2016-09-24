@@ -71,8 +71,14 @@ public class ListaRestController {
 	}
 	
 	@RequestMapping(value="/lista/{idLista}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public Lista buscar(@PathVariable long idLista){
-		return listaDao.buscar(idLista);
+	public ResponseEntity<Lista> buscar(@PathVariable long idLista){
+		Lista lista = listaDao.buscar(idLista);
+		
+		if(lista == null){
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}else{
+			return ResponseEntity.ok().body(lista);
+		}
 	}
 	
 	
