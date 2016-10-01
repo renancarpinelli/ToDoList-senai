@@ -19,7 +19,7 @@ public class ListaDao {
 	private EntityManager manager;
 	
 	@Transactional
-	public void insetir(Lista lista){
+	public void inserir(Lista lista){
 		manager.persist(lista);
 	}
 	

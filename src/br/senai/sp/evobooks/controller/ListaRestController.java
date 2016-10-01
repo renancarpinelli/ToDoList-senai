@@ -42,7 +42,7 @@ public class ListaRestController {
 				itens.add(item);
 			}
 			lista.setItens(itens);
-			listaDao.insetir(lista);
+			listaDao.inserir(lista);
 			URI location = new URI("/lista/" + lista.getId());
 			return ResponseEntity.created(location).body(lista);
 
